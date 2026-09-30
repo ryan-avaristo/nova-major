@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Lanchonete Nova Major - cardápio e pedidos em Vila Buarque, São Paulo.">
+  <title>Nova Major | Lanchonete</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Outfit:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="header">
+    <a class="logo" href="#inicio" aria-label="Nova Major - início">
+      <span class="logo-mark">NM</span>
+      <span>Nova Major</span>
+    </a>
+    <nav class="nav" id="nav">
+      <a href="#inicio">Início</a>
+      <a href="#cardapio">Cardápio</a>
+      <a href="#sobre">Sobre</a>
+      <a href="#localizacao">Localização</a>
+    </nav>
+    <a class="header-order" href="#cardapio">Fazer pedido</a>
+    <button class="menu-btn" id="menuBtn" aria-label="Abrir menu">☰</button>
+  </header>
+
+  <main>
+    <section class="hero" id="inicio">
+      <div class="hero-copy">
+        <span class="eyebrow">Vila Buarque • São Paulo</span>
+        <h1>Seu lanche.<br><span>Seu momento.</span></h1>
+        <p>Um cardápio feito para matar a fome sem complicação. Escolha seu pedido e fale com a Nova Major pelo WhatsApp.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#cardapio">Ver cardápio <span>→</span></a>
+          <a class="btn btn-ghost" href="#localizacao">Como chegar</a>
+        </div>
+        <div class="hero-note"><span class="dot"></span> Cardápio digital • Pedido fácil pelo celular</div>
+      </div>
+      <div class="hero-art" aria-label="Imagem ilustrativa de hambúrguer">
+        <div class="glow"></div>
+        <div class="burger">
+          <div class="bun top"></div>
+          <div class="lettuce"></div>
+          <div class="cheese"></div>
+          <div class="patty"></div>
+          <div class="cheese second"></div>
+          <div class="patty lower"></div>
+          <div class="bun bottom"></div>
+        </div>
+        <div class="floating-card card-price"><small>SEU PEDIDO</small><strong>🍔 + 🍟 + 🥤</strong></div>
+      </div>
+    </section>
+
+    <section class="quick">
+      <div><span>🍔</span><div><strong>Cardápio</strong><small>Escolha seus favoritos</small></div></div>
+      <div><span>📲</span><div><strong>Pedido fácil</strong><small>Direto pelo WhatsApp</small></div></div>
+      <div><span>📍</span><div><strong>Vila Buarque</strong><small>Rua Major Sertório, 511</small></div></div>
+    </section>
+
+    <section class="menu-section" id="cardapio">
+      <div class="section-head">
+        <div>
+          <span class="eyebrow">Escolha o seu</span>
+          <h2>Cardápio</h2>
+        </div>
+        <p>Os itens abaixo são demonstrativos nesta V1 e podem ser trocados pelo cardápio real da loja.</p>
+      </div>
+
+      <div class="categories" id="categories">
+        <button class="active" data-category="todos">Todos</button>
+        <button data-category="hamburgueres">Hambúrgueres</button>
+        <button data-category="sanduiches">Sanduíches</button>
+        <button data-category="porcoes">Porções</button>
+        <button data-category="bebidas">Bebidas</button>
+      </div>
+
+      <div class="products" id="products"></div>
+    </section>
+
+    <section class="about" id="sobre">
+      <div class="about-image"><span>NM</span></div>
+      <div class="about-copy">
+        <span class="eyebrow">Sobre a Nova Major</span>
+        <h2>Um lugar para fazer uma pausa e comer bem.</h2>
+        <p>A Nova Major está localizada em Vila Buarque, São Paulo. Esta seção pode receber a história real da lanchonete, fotos do espaço e outros detalhes fornecidos pelo proprietário.</p>
+        <div class="about-points">
+          <span>✓ Atendimento próximo</span>
+          <span>✓ Cardápio digital</span>
+          <span>✓ Pedido pelo WhatsApp</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="location" id="localizacao">
+      <div>
+        <span class="eyebrow">Onde estamos</span>
+        <h2>Venha até a Nova Major.</h2>
+        <p>Rua Major Sertório, 511<br>Vila Buarque — São Paulo, SP<br>CEP 01222-000</p>
+        <a class="btn btn-primary" href="https://www.google.com/maps/search/?api=1&query=Rua+Major+Sertorio+511+Vila+Buarque+Sao+Paulo" target="_blank" rel="noopener">Abrir no mapa →</a>
+      </div>
+      <div class="map-box">
+        <div class="map-pin">📍</div>
+        <strong>Rua Major Sertório, 511</strong>
+        <span>Vila Buarque • São Paulo</span>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-main">
+      <div class="logo"><span class="logo-mark">NM</span><span>Nova Major</span></div>
+      <p>Seu lanche, seu momento.</p>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Nova Major</span>
+      <span>Site demonstrativo • V1</span>
+    </div>
+  </footer>
+
+  <button class="cart-float" id="cartBtn" aria-label="Abrir pedido">🛒 <b id="cartCount">0</b></button>
+
+  <div class="modal" id="cartModal" aria-hidden="true">
+    <div class="modal-box">
+      <button class="close" id="closeCart">×</button>
+      <span class="eyebrow">Seu pedido</span>
+      <h2>Resumo</h2>
+      <div id="cartItems"></div>
+      <div class="total"><span>Total</span><strong id="cartTotal">R$ 0,00</strong></div>
+      <button class="btn btn-primary full" id="whatsappBtn">Enviar pedido pelo WhatsApp →</button>
+      <small class="modal-note">Nesta V1, o número do WhatsApp ainda precisa ser configurado.</small>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
